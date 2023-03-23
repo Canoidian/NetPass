@@ -12,7 +12,7 @@ def view():
             user, passw = data.split("|")
             print("User:", user, "| Password:", passw)
 
-master_pwd = input("What is the Master Password?")
+master_pwd = input("What is the Master Password? \n")
 
 while True:
     mode = input("What are you here for? 1. Add new password 2. See all passwords (add, view) Press q to quit \n").lower()
