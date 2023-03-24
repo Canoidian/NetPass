@@ -1,3 +1,5 @@
+from getpass import getpass
+
 def add():
     name = input("Item Name: ")
     pwd = input("Password: ")
@@ -12,7 +14,13 @@ def view():
             user, passw = data.split("|")
             print("User:", user, "| Password:", passw)
 
-master_pwd = input("What is the Master Password? \n")
+while True:
+    master_pwd = getpass("Enter the Master Password: \n")
+
+    if master_pwd == "MasterPassword":
+        break
+    else:
+        print("Incorrect password. Please try again.")
 
 while True:
     mode = input("What are you here for? 1. Add new password 2. See all passwords (add, view) Press q to quit \n").lower()
